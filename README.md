@@ -41,7 +41,7 @@ Indexation de 1er niveau : URLs de base. 2ème niveau : contenu chargé quand le
 Rediriger proprement les accès directs aux pages chargées via du JS pour éviter les 404.
 
 **Outils de rendu dynamique** : [puppeteer](https://github.com/GoogleChrome/puppeteer) / [rendertron](https://github.com/GoogleChrome/rendertron)  
-**Outils de diagnostic** : [g.co/mobile-friendly](g.co/mobile-friendly) / [g.co/SearchConsole](g.co/SearchConsole)
+**Outils de diagnostic** : [g.co/mobile-friendly](https://g.co/mobile-friendly) / [g.co/SearchConsole](https://g.co/SearchConsole)
 
 ## L'infrastructure as code avec Terraform
 
@@ -91,7 +91,7 @@ Utilisation d'[Istio](https://github.com/istio/istio), un ensemble de services p
 - **Zipkin** : outil pour rechercher / filtrer / visualiser les conversations entre services
 - **Gestion du traffic** : routing du traffic basé sur des en-têtes HTTP pour faciliter le déploiement de corrections (canary deployment) ou mirroring pour reproduire l'utilisation de l'application en conditions réelles. Blue/Green deployment : routage d'un % du traffic vers une nouvelle version du service.
 
-Peut aussi gérer des fonctionnalités de **circuit breaker** sans impacter le code, mais est moins complet que la solution de Netflix : [Hystrix](https://github.com/Netflix/Hystrix).
+Peut aussi gérer des fonctionnalités de **circuit breaker** sans impacter le code, mais est moins complet que la solution [Hystrix](https://github.com/Netflix/Hystrix) de Netflix.
 
 ## Testing Out Kotlin
 
@@ -108,9 +108,9 @@ Kotlin permet de définir des extensions de fonctions et des extensions de prope
 
 [Présentation de Concourse](https://github.com/loganmzz/concourse-presentation-introduction) : la CI/CD à base de pipelines et de Docker imaginée par Pivotal, la société derrière le framework Spring et Cloud Foundry.
 
-Explications sur le principe de **fan-in / fan-out**, approche différente des pipelines  en silos. Tout est basé sur de la **configuration as code** en Yaml. La solution est cloud-native, à base de conteneurs et de volumes Docker.
+Explications sur le principe de **fan-in / fan-out**, approche différente des pipelines  en silos. Tout est basé sur de la **configuration as code** en Yaml. La solution est cloud-native, à base de conteneurs et de volumes Docker. Toute la démo des pipelines est faite en ligne de commande, l'IHM de [Concourse](https://github.com/concourse/concourse) est assez simple.
 
-Toute la démo des pipelines est faite en ligne de commande, l'IHM de [Concourse](https://github.com/concourse/concourse) est assez simple. La gestion du cache est faite par tâche, ce qui peut vite devenir assez gourmand notamment avec des tâches Maven (.m2 dupliqué). **Contournement** : déclarer le cache en tant que ressource et le passer entre les tâches. On peut rentrer dans les conteneurs (hijack) pour débugger les pipelines.
+La gestion du cache est faite par tâche, ce qui peut vite devenir assez gourmand notamment avec des tâches Maven (.m2 dupliqué). **Contournement** : déclarer le cache en tant que ressource et le passer entre les tâches. On peut rentrer dans les conteneurs (hijack) pour débugger les pipelines.
 
 ## Créer un datapipeline en 20 minutes avec Kafka Connect
 
@@ -121,9 +121,7 @@ Démo faite sur la gestion du consentement GDPR.
 
 ## Détectez et trackez les aliens qui se cachent dans vos dépendances
 
-Les **CVE** (Common Vulnerabilities and Exposures) sont répertoriés sur le site du [NIST](https://nvd.nist.gov/) du gouvernement américain.
-
-La criticité des vulnérabilités est évaluée à l'aide d'un score sur une échelle de 10 : le **CVSS** (Common Vulnerability Scoring System).
+Les **CVE** (Common Vulnerabilities and Exposures) sont répertoriés sur le site du [NIST](https://nvd.nist.gov/) du gouvernement américain. La criticité des vulnérabilités est évaluée à l'aide d'un score sur une échelle de 10 : le **CVSS** (Common Vulnerability Scoring System).
 
 Démonstration faite avec une vulnérabilité dans **Spring Data REST** permettant de naviguer sur le file system du serveur. Utilisation de l'intégration continue (Jenkins) et de l'outil [Dependency Check](https://www.owasp.org/index.php/OWASP_Dependency_Check) fourni pas l'**OWASP** pour analyser les failles de sécurité dans les dépendances des projets.
 

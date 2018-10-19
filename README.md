@@ -36,19 +36,18 @@ Le **SEO** pour les applications JavaScript. Rappel des principes de base :
   - **Problématique** : une page de base d'une application JS ne contient pas de données, elles sont chargées en JS.
   - Pas de suivi de la navigation via des events JS (onclick etc.)
 
-**Solutions** : Google bot. Indexation de 1er niveau : URLs de base. 2ème niveau : contenu chargé quand les ressources sont disponibles.  
+**Solutions** : Google bot.  
+Indexation de 1er niveau : URLs de base. 2ème niveau : contenu chargé quand les ressources sont disponibles.  
 Rediriger proprement les accès directs aux pages chargées via du JS pour éviter les 404.
 
 **Outils de rendu dynamique** : [puppeteer](https://github.com/GoogleChrome/puppeteer) / [rendertron](https://github.com/GoogleChrome/rendertron)  
-**Outils de diagnostic** : g.co/mobile-friendly / g.co/SearchConsole
+**Outils de diagnostic** : [g.co/mobile-friendly](g.co/mobile-friendly) / [g.co/SearchConsole](g.co/SearchConsole)
 
 ## L'infrastructure as code avec Terraform
 
-Présentation de [Terraform](https://github.com/hashicorp/terraform), outil intéressant pour gérer la mise à l'échelle de son infrastructure cloud GCP, AWS, Azure, Kubernetes.  
-Peut aussi pour gérer des outils annexes (GitHub, Jira, Grafana) via leurs API.
+Présentation de [Terraform](https://github.com/hashicorp/terraform), outil intéressant pour gérer la mise à l'échelle de son infrastructure cloud GCP, AWS, Azure, Kubernetes. Peut aussi pour gérer des outils annexes (GitHub, Jira, Grafana) via leurs API.
 
-Terraform est utilisable via un **CLI**. Il a son propre langage de configuration (HCL) pour s'affranchir du langage propre à chaque outil.  
-Démo faite avec Intellij, un [plugin](https://plugins.jetbrains.com/plugin/7808-hashicorp-terraform--hcl-language-support) existe pour l'autocomplétion.
+Terraform est utilisable via un **CLI**. Il a son propre langage de configuration (HCL) pour s'affranchir du langage propre à chaque outil. Démo faite avec Intellij, un [plugin](https://plugins.jetbrains.com/plugin/7808-hashicorp-terraform--hcl-language-support) existe pour l'autocomplétion.
 
 Il est nécessaire de penser l'architecture en couches avant de définir la topologie, ça facilite la mise à l'échelle et évite de se retrouver avec un monolithe. Terraform peut être utilisé sur une infrastructure Cloud déjà existante, il est également possible de définir une couche d'abstraction avec des modules custom ou pré-existants disponibles sur [terraform module registry](https://registry.terraform.io/).
 
@@ -58,21 +57,23 @@ Partenariat entre le CHU, une ESN et une école. Recherche sur les douleurs fant
 
 **Techniques** : Électro-encéphalographie P300. La machine apprend les signaux émis par le cerveau pour bouger la main et les reproduit dans un environnement VR. Pour que le traitement soit mieux accepté par le patient, utilisation d'une cabine qui scanne le corps en 3D pour générer un avatar, et utilisation de jeux (gamification).
 
-Ces techniques seront utilisées en rééducation dans un premier temps.  
-**Projets futurs** : utilisation de ces technos pour piloter un exosquelette, ou dans un cadre non médical piloter de la domotique.
+Ces techniques seront utilisées en rééducation dans un premier temps. **Projets futurs** : utilisation de ces technos pour piloter un exosquelette, ou dans un cadre non médical piloter de la domotique.
 
 ## What Can We Learn With JavaScript Fatigue?
 
 Que peut-on apprendre de la multitude de frameworks et librairies JS disponibles ?
 
-**Concepts importants à garder en tête** : on choisit des technologies pour résoudre des problèmes, il faut donc se poser la question puis choisir la techno adaptée, et trouver la balance entre le coût et le gain. **Focus sur les frameworks web** : permettent de se concentrer sur les choses qui comptent mais les technologies web bougent très vite et nécessitent de s'adapter en permanence. **Conseil** : accepter qu'on ne peut pas tout connaître et qu'on apprend quand on est confronté à un problème. Construire des choses plutôt que suivre des tutoriels pour apprendre.
+**Concepts importants à garder en tête** : on choisit des technologies pour résoudre des problèmes, il faut donc se poser la question puis choisir la techno adaptée, et trouver la balance entre le coût et le gain.
+
+**Focus sur les frameworks web** : permettent de se concentrer sur les choses qui comptent mais les technologies web bougent très vite et nécessitent de s'adapter en permanence.
+
+**Conseil** : accepter qu'on ne peut pas tout connaître et qu'on apprend quand on est confronté à un problème. Construire des choses plutôt que suivre des tutoriels pour apprendre.
 
 # Day 2 (19/10/2018)
 
 ## Git Dammit!
 
-Cours didactique sur les principales difficultés rencontrées avec git, pour résoudre le fameux TDM (t'as 2 minutes ? J'ai un problème avec git).  
-**Points importants** :
+Cours didactique sur les principales difficultés rencontrées avec git, pour résoudre le fameux TDM (t'as 2 minutes ? J'ai un problème avec git). **Points importants** :
 
 - **Soigner ses commits** pour avoir un historique lisible et faciliter les revues de code. C'est un prérequis pour les projets open source.
 - **Pas de modification directe dans la branche partagée**, fonctionner par feature branch et pull request soumise à revue de code
@@ -83,9 +84,8 @@ Défaire des modifs sur un seul fichier : option --, par exemple : ```git checko
 
 ## Istio, we have a problem! Understanding and fixing bugs with a service-mesh
 
-Utilisation d'[Istio](https://github.com/istio/istio), un ensemble de services pour monitorer et avoir de la visibilité sur des microservices déployés sur un cluster Kubernetes.
+Utilisation d'[Istio](https://github.com/istio/istio), un ensemble de services pour monitorer et avoir de la visibilité sur des microservices déployés sur un cluster Kubernetes. Principaux composants :
 
-Principaux composants :
 - **Service Graph** : graphe permettant de visualiser les composants déployés et les liens de communication entre eux
 - **Dashboard** pour monitorer la couche applicative, basé sur [Grafana](https://github.com/grafana/grafana) et des données fournies par [Prometheus](https://github.com/prometheus/prometheus)
 - **Zipkin** : outil pour rechercher / filtrer / visualiser les conversations entre services

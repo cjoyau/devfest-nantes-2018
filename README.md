@@ -5,6 +5,9 @@ Compte-rendu des sessions du DevFest Nantes 2018 auxquelles j'ai assisté.
 
 ## Shaping your app’s architecture with Kotlin and Architecture Components
 
+| <img src="photos/plaidapp1.jpg" width="320"> |
+|:---:|
+
 Refactoring de l'application Android [Plaid](https://github.com/nickbutcher/plaid) avec Kotlin et les composants d'architecture Android. Intéressant de voir comment cet apport permet de réduire le volume de code, le couplage et la dette technique.
 
 **Couches cibles** :
@@ -13,6 +16,9 @@ Refactoring de l'application Android [Plaid](https://github.com/nickbutcher/plai
 - Data (Repositories)
 
 ## La conquête de l'espace se déroule dans votre poche
+
+| <img src="photos/spacevr1.jpg" width="320"> |
+|:---:|
 
 La [découverte de l'espace en VR](https://github.com/an0rak-dev/PlanetaryConquest) avec un simple smartphone.  
 Comparaison des tickets d'entrée des **plateformes VR de Google** :
@@ -26,14 +32,17 @@ Les **degrés de liberté** sont les mouvements permis par le matériel VR : 3 p
 
 **Limitations** : le motion sickness apparaît en dessous de 60 FPS, idéalement il faudrait 90. On est limités par la puissance (et la batterie) du téléphone. Alternative plus simple qu'OpenGL : **Unity**.
 
-## Deliver search-friendly JavaScript-powered websites -- Un site JavaScript search-friendly !
+## Deliver search-friendly JavaScript-powered websites
+
+| <img src="photos/jssearch1.jpg" width="320"> |
+|:---:|
 
 Le **SEO** pour les applications JavaScript. Rappel des principes de base :
 
 - **Crawling** : parcours des urls disponibles sur le site web, piloté par le robots.txt
   - **Problématique** : Les URLs sont liées à du routing JS.
-- **Indexing** : codes HTTP, pondération du contenu des pages et suivi des liens
-  - **Problématique** : une page de base d'une application JS ne contient pas de données, elles sont chargées en JS.
+- **Indexing** : codes HTTP, pondération du contenu des pages et suivi des liens. **Problématiques** :
+  - Une page de base d'une application JS ne contient pas de données, elles sont chargées en JS
   - Pas de suivi de la navigation via des events JS (onclick etc.)
 
 **Solutions** : Google bot.  
@@ -45,6 +54,9 @@ Rediriger proprement les accès directs aux pages chargées via du JS pour évit
 
 ## L'infrastructure as code avec Terraform
 
+| <img src="photos/terraform1.jpg" width="320"> | <img src="photos/terraform2.jpg" width="320"> |
+|:---:|:---:|
+
 Présentation de [Terraform](https://github.com/hashicorp/terraform), outil intéressant pour gérer la mise à l'échelle de son infrastructure cloud GCP, AWS, Azure, Kubernetes. Peut aussi pour gérer des outils annexes (GitHub, Jira, Grafana) via leurs API.
 
 Terraform est utilisable via un **CLI**. Il a son propre langage de configuration (HCL) pour s'affranchir du langage propre à chaque outil. Démo faite avec Intellij, un [plugin](https://plugins.jetbrains.com/plugin/7808-hashicorp-terraform--hcl-language-support) existe pour l'autocomplétion.
@@ -53,6 +65,9 @@ Il est nécessaire de penser l'architecture en couches avant de définir la topo
 
 ## Neuro Game Experience : Votre pensée prend le contrôle !
 
+| <img src="photos/neurogame1.jpg" width="320"> | <img src="photos/neurogame2.jpg" width="320"> |
+|:---:|:---:|
+
 Partenariat entre le CHU, une ESN et une école. Recherche sur les douleurs fantômes après une amputation : visualiser les membres en VR permet d'apaiser le cerveau.
 
 **Techniques** : Électro-encéphalographie P300. La machine apprend les signaux émis par le cerveau pour bouger la main et les reproduit dans un environnement VR. Pour que le traitement soit mieux accepté par le patient, utilisation d'une cabine qui scanne le corps en 3D pour générer un avatar, et utilisation de jeux (gamification).
@@ -60,6 +75,9 @@ Partenariat entre le CHU, une ESN et une école. Recherche sur les douleurs fant
 Ces techniques seront utilisées en rééducation dans un premier temps. **Projets futurs** : utilisation de ces technos pour piloter un exosquelette, ou dans un cadre non médical piloter de la domotique.
 
 ## What Can We Learn With JavaScript Fatigue?
+
+| <img src="photos/jsfatigue1.jpg" width="320"> | <img src="photos/jsfatigue2.jpg" width="320"> | <img src="photos/jsfatigue3.jpg" width="320"> |
+|:---:|:---:|:---:|
 
 Que peut-on apprendre de la multitude de frameworks et librairies JS disponibles ?
 
@@ -73,6 +91,9 @@ Que peut-on apprendre de la multitude de frameworks et librairies JS disponibles
 
 ## Git Dammit!
 
+| <img src="photos/gitdammit1.jpg" width="320"> |
+|:---:|
+
 Cours didactique sur les principales difficultés rencontrées avec git, pour résoudre le fameux TDM (t'as 2 minutes ? J'ai un problème avec git). **Points importants** :
 
 - **Soigner ses commits** pour avoir un historique lisible et faciliter les revues de code. C'est un prérequis pour les projets open source.
@@ -83,6 +104,9 @@ Cours didactique sur les principales difficultés rencontrées avec git, pour r�
 Défaire des modifs sur un seul fichier : option --, par exemple : ```git checkout aeb123 -- path/to/file```
 
 ## Istio, we have a problem! Understanding and fixing bugs with a service-mesh
+
+| <img src="photos/istio1.jpg" width="320"> | <img src="photos/istio2.jpg" width="320"> |
+|:---:|:---:|
 
 Utilisation d'[Istio](https://github.com/istio/istio), un ensemble de services pour monitorer et avoir de la visibilité sur des microservices déployés sur un cluster Kubernetes. Principaux composants :
 
@@ -95,6 +119,9 @@ Peut aussi gérer des fonctionnalités de **circuit breaker** sans impacter le c
 
 ## Testing Out Kotlin
 
+| <img src="photos/kotlin1.jpg" width="320"> | <img src="photos/kotlin2.jpg" width="320"> | <img src="photos/kotlin3.jpg" width="320"> |
+|:---:|:---:|:---:|
+
 L'apprentissage de [Kotlin](https://github.com/JetBrains/kotlin) par les tests. Depuis l'année dernière c'est le 2ème langage officiellement supporté pour le développement Android.
 
 Guidelines de Google :
@@ -106,6 +133,9 @@ Kotlin permet de définir des extensions de fonctions et des extensions de prope
 
 ## Concourse : CI/CD version 2020 !
 
+| <img src="photos/concourse1.jpg" width="320"> | <img src="photos/concourse2.jpg" width="320"> | <img src="photos/concourse3.jpg" width="320"> |
+|:---:|:---:|:---:|
+
 [Présentation de Concourse](https://github.com/loganmzz/concourse-presentation-introduction) : la CI/CD à base de pipelines et de Docker imaginée par Pivotal, la société derrière le framework Spring et Cloud Foundry.
 
 Explications sur le principe de **fan-in / fan-out**, approche différente des pipelines  en silos. Tout est basé sur de la **configuration as code** en Yaml. La solution est cloud-native, à base de conteneurs et de volumes Docker. Toute la démo des pipelines est faite en ligne de commande, l'IHM de [Concourse](https://github.com/concourse/concourse) est assez simple.
@@ -114,12 +144,18 @@ La gestion du cache est faite par tâche, ce qui peut vite devenir assez gourman
 
 ## Créer un datapipeline en 20 minutes avec Kafka Connect
 
+| <img src="photos/kafka1.jpg" width="320"> | <img src="photos/kafka2.jpg" width="320"> |
+|:---:|:---:|
+
 L'utilisation du framework **Kafka Connect** chez iAdvize pour créér des data pipelines en temps réel, scalables et résilients.  
 Démo faite sur la gestion du consentement GDPR.
 
 **Rappel** : [Kafka](https://github.com/apache/kafka) est une plateforme distribuée de streaming de données. Kafka Connect permet de streamer des données en entrée et en sortie de Kafka à l'aide de connecteurs (clés en main pour la plupart) et fournit une API REST de configuration. Une UI faite par Landoop est disponible sur GitHub : [Kafka Connect UI](https://github.com/Landoop/kafka-connect-ui).
 
 ## Détectez et trackez les aliens qui se cachent dans vos dépendances
+
+| <img src="photos/aliens1.jpg" width="320"> |
+|:---:|
 
 Les **CVE** (Common Vulnerabilities and Exposures) sont répertoriés sur le site du [NIST](https://nvd.nist.gov/) du gouvernement américain. La criticité des vulnérabilités est évaluée à l'aide d'un score sur une échelle de 10 : le **CVSS** (Common Vulnerability Scoring System).
 
